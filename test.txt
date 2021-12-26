@@ -1,0 +1,42 @@
+-------------------------------------------------------
+create phpmyadmin resource
+CLI request:
+
+curl -X POST http://172.17.0.2:32111/pmas -H "Content-Type: application/json" -d '{"username": "yaniarmultidocker"}'
+
+{
+  "info": {
+    "mysql_port": 21853,
+    "phpmyadmin_port": 11643,
+    "username": "yaniarmultidocker"
+  },
+  "status": "OK"
+}
+
+----------------------------------------------------------
+
+get info by username
+
+CLI request:
+
+curl -X GET http://172.17.0.2:32111/pma/yaniarmultidocker
+
+{
+  "info": {
+    "mysql_port": 21853,
+    "phpmyadmin_port": 11643,
+    "username": "yaniarmultidocker"
+  },
+  "status": "OK"
+}
+
+------------------------------------------------------------
+delete by username
+
+CLI request:
+
+curl -X DELETE http://172.17.0.2:32111/pma/yaniarmultidocker
+
+{
+  "status": "OK"
+}

@@ -1,0 +1,6 @@
+docker
+uuid
+requests
+flask
+flask_restful
+
